@@ -16,7 +16,7 @@ function nextSlide() {
 
 function resetAuto() {
     clearInterval(autoTimer);
-    autoTimer = setInterval(nextSlide, 5000);
+    autoTimer = setInterval(nextSlide, 2000);
 }
 
 dots.forEach((dot, i) => {
@@ -27,4 +27,4 @@ dots.forEach((dot, i) => {
 });
 
 goToSlide(0);
-autoTimer = setInterval(nextSlide, 5000);
+autoTimer = setInterval(nextSlide, 2000);

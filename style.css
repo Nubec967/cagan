@@ -495,7 +495,7 @@ body {
     background: rgba(0, 0, 0, 0.3);
     border-radius: 12px;
     overflow: hidden;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 10;
     display: flex;
     align-items: center;
     justify-content: center;
