@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="CaGan,CaGan官网,Minecraft,帮助文档,游玩指南" />
+    <meta name="description" content="CaGan 服务器帮助文档 - 头衔、Home、传送、皮肤等" />
+    <meta name="author" content="Dan_Evan" />
+    <meta name="robots" content="index,follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link type="text/css" href="../style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://font.sec.miui.com/font/css?family=MiSans:400,700:MiSans" />
+    <title>新玩家快速入门 - CaGan</title>
+</head>
+
+<body>
+    <div class="header">新玩家快速入门</div>
+
+    <div class="container">
+        <div class="section">
+            <div class="sub-intro" style="margin-bottom: 0;">
+                <p style="font-size: 14px; color: #7ec8e3; margin-bottom: 8px;">本文档参考自玩家自制指南</p>
+                <p>本指南由玩家整理，内容仅供参考。</p>
+                <p>关于更详细的讲解，请阅读原文。</p>
+                <p>原文地址：<a href="https://blog.danevan.top/posts/help-cagan/" target="_blank" style="color: #4a9eff;">https://blog.danevan.top/posts/help-cagan/</a></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">头衔系统</h2>
+            <div class="sub-intro">
+                <p>在<strong>原版生存服</strong>和<strong>粘液空岛服</strong>内，可以通过指令 <code>/prefix</code> 来自定义玩家头衔。</p>
+                <p><strong>用法：</strong><code>/prefix &amp;xXXXX</code></p>
+                <p>在本服务器内，可以使用颜色代码来自定义头衔颜色，使用 <code>&amp;</code> 替代 <code>§</code>，例如 <code>&amp;b</code>（浅蓝色）等同于 <code>§b</code>。</p>
+                <p>设置头衔<strong>完全免费</strong>且<strong>不限次数</strong>，在任何一个子服务器内设置好的头衔，在传送大厅、原版生存服和粘液空岛服内都能同步显示。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Home 系统</h2>
+            <div class="sub-intro">
+                <p>服务器内置了设置家的功能，设置家的数量和次数均<strong>无限制</strong>。</p>
+                <ul>
+                    <li><code>/sethome xxx</code> — 设置名为 xxx 的家</li>
+                    <li><code>/home xxx</code> — 传送到名为 xxx 的家</li>
+                    <li><code>/rmhome xxx</code> 或 <code>/delhome xxx</code> — 删除名为 xxx 的家</li>
+                    <li><code>/renamehome aaa bbb</code> — 将名为 aaa 的家重命名为 bbb</li>
+                </ul>
+                <p>不指定名称时，默认操作名为 <code>home</code> 的家。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">传送系统</h2>
+            <div class="sub-intro">
+                <p>在原版生存服中，支持玩家间传送：</p>
+                <ul>
+                    <li><code>/tpa xxx</code> 或 <code>/tpask xxx</code> — 请求传送到某人</li>
+                    <li><code>/tpahere xxx</code> — 请求某人传送到你这里</li>
+                    <li><code>/tpaccept</code> — 接受传送请求</li>
+                    <li><code>/tpdeny</code> — 拒绝传送请求</li>
+                </ul>
+                <p>一个请求的有效时间为 <strong>120 秒</strong>，超时自动过期。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">切换皮肤</h2>
+            <div class="sub-intro">
+                <p>登录服务器后，服务器会自动根据你的 ID 查找对应的正版玩家皮肤。你也可以手动切换皮肤：</p>
+                <ul>
+                    <li><code>/skin playerID</code> — 切换到正版玩家 ID 的皮肤，如 <code>/skin Dream</code></li>
+                    <li><code>/skin url xxx</code> — 从 URL 获取皮肤并应用</li>
+                    <li><code>/skin clear</code> — 清除皮肤，恢复默认</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">常用功能</h2>
+            <div class="sub-intro">
+                <ul>
+                    <li><code>/back</code> — 死亡后传回死亡地点或上一个 home</li>
+                    <li><code>/tell xxx abc</code> — 向某人私聊</li>
+                    <li><code>/menu</code> 或 <kbd>Shift</kbd>+<kbd>F</kbd> — 打开箱子菜单</li>
+                    <li><code>[i]</code> — 在聊天框输入可展示手持物品</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">活死人功能</h2>
+            <div class="sub-intro">
+                <p>在原版生存服中，可以使用一系列花样动作：</p>
+                <ul>
+                    <li><code>/lay</code> — 原地躺下</li>
+                    <li><code>/sit</code> — 原地坐下</li>
+                    <li><code>/crawl</code> — 原地趴下</li>
+                    <li><code>/spin</code> — 原地转圈</li>
+                </ul>
+                <p>使用这些动作时，其他玩家睡觉可忽略你，实体生物无法察觉你。连按两下 <kbd>左Shift</kbd> 可取消状态。</p>
+                <p>另外，空手右键楼梯或台阶可以直接坐上去。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">箱子商店</h2>
+            <div class="sub-intro">
+                <p>在原版生存服中，你可以创建箱子商店用于玩家间交易。</p>
+                <ul>
+                    <li><strong>创建商店：</strong>手持想要出售的物品，左键点击箱子，在聊天框输入单价即可</li>
+                    <li><strong>购买物品：</strong>左键箱子商店前的告示牌，在聊天框输入购买数量</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">世界商店</h2>
+            <div class="sub-intro">
+                <p>世界商店可以在箱子菜单中找到，用于<strong>直接从服务器购买物品</strong>或<strong>直接出售物品</strong>，相当于服务器银行。</p>
+                <p>可供交易的物品种类较少，价格较高，建议优先使用箱子商店与玩家交易。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">金币系统</h2>
+            <div class="sub-intro">
+                <p>在原版生存服中，金币可用于购买物品、创建领地和玩家间支付。</p>
+                <ul>
+                    <li><strong>获取金币：</strong>出售物品给世界商店</li>
+                    <li><strong>支付金币：</strong><code>/pay xxx 数量</code> — 向某玩家转账</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">领地系统</h2>
+            <div class="sub-intro">
+                <p>在原版生存服中，服务器内置了领地系统（Residence）。</p>
+                <ul>
+                    <li><code>/res create xxx</code> — 创建领地（需先使用木锄选取选区）</li>
+                    <li><code>/res remove xxx</code> — 删除领地</li>
+                    <li><code>/res set</code> — 设置领地公共权限</li>
+                    <li><code>/res pset xxx somebody</code> — 设置某人在领地内的个人权限</li>
+                    <li><code>/res expand ?</code> — 向面前方向扩展领地</li>
+                    <li><code>/res contract ?</code> — 向背后方向收缩领地</li>
+                    <li><code>/res tp xxx</code> — 传送到领地</li>
+                </ul>
+                <p>更多高级功能请查阅服务器内帮助或 Minecraft 插件百科。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">MOD 使用</h2>
+            <div class="sub-intro">
+                <p>在原版生存服中，一些主流生电 MOD 均可使用，例如：</p>
+                <ul>
+                    <li>投影（Litematica）及打印机</li>
+                    <li>灵魂出窍（Tweakeroo、Freecam）</li>
+                    <li>小地图（Xaero、JourneyMap）</li>
+                    <li>方块信息显示（Jade、WTHIT）</li>
+                    <li>一键背包整理</li>
+                </ul>
+                <p><strong>严禁</strong>将灵魂出窍用于挖矿，<strong>严禁</strong>使用矿透 MOD 和外挂客户端。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">VIP 和奖励</h2>
+            <div class="sub-intro">
+                <p>服务器为<strong>公益服务器</strong>，VIP 非充值获得。</p>
+                <p><strong>获得 VIP 的方法：</strong></p>
+                <ul>
+                    <li>发布宣传视频到 B 站</li>
+                    <li>在服务器内建造大型建筑</li>
+                    <li>拉新人加入服务器</li>
+                    <li>参加服务器限时活动</li>
+                </ul>
+                <p><strong>VIP 特权：</strong>生存模式下飞行（<code>/fly</code>）。</p>
+            </div>
+        </div>
+
+        <div class="section" style="text-align: center;">
+            <a href="../index.html" class="btn btn-outline">&larr; 返回首页</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="https://icp.gov.moe/?keyword=20240922" target="_blank" style="text-decoration: none" rel="noopener">
+            <img src="../icon/icon.png" style="width: 16px; height: 16px; vertical-align: middle" />
+            <span style="color: white; font-size: 12px; vertical-align: middle">萌ICP备20240922号</span>
+        </a>
+    </div>
+</body>
+
+</html>
