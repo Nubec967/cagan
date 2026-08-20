@@ -19,12 +19,15 @@
     <div class="header">游戏截图</div>
 
     <div class="container">
-        <p style="text-align: center; margin-top: 20px;">加载图片可能会比较慢，可以稍微等一下。</p>
+        <div style="max-width: 800px; margin: 20px auto 0; padding: 16px 20px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; text-align: center;">
+            <p style="color: #f0b060; font-size: 14px;">加载图片可能会比较慢，可以稍微等一下。</p>
+        </div>
 
         <div class="section">
             <div class="gallery-container">
                 <div class="gallery-viewer" id="galleryViewer">
                     <img id="galleryImg" alt="游戏截图" />
+                    <div class="gallery-loading" id="galleryLoading">加载中...</div>
                 </div>
                 <div class="gallery-nav">
                     <button id="prevBtn">&larr;</button>

@@ -514,6 +514,25 @@ body {
     opacity: 1;
 }
 
+.gallery-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a0b0c0;
+    font-size: 15px;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-loading.hidden {
+    opacity: 0;
+}
+
 .gallery-nav {
     display: flex;
     justify-content: center;

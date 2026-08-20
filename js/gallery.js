@@ -42,6 +42,7 @@ const images = [
 ];
 
 const imgEl = document.getElementById('galleryImg');
+const loadingEl = document.getElementById('galleryLoading');
 const counterEl = document.getElementById('galleryCounter');
 const captionEl = document.getElementById('galleryCaption');
 const prevBtn = document.getElementById('prevBtn');
@@ -76,14 +77,17 @@ function loadImage(index) {
     const path = '../img/' + images[index];
     if (loadedImages[index]) {
         imgEl.src = path;
+        loadingEl.classList.add('hidden');
         return;
     }
     imgEl.src = '';
     imgEl.classList.remove('loaded');
+    loadingEl.classList.remove('hidden');
     const temp = new Image();
     temp.onload = function () {
         loadedImages[index] = true;
         imgEl.src = path;
+        loadingEl.classList.add('hidden');
         requestAnimationFrame(() => {
             imgEl.classList.add('loaded');
         });
