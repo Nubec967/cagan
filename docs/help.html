@@ -28,6 +28,18 @@
         </div>
 
         <div class="section">
+            <h2 class="section-title">注册与登录</h2>
+            <div class="sub-intro">
+                <p><strong>注册：</strong>新玩家首次进服，根据聊天框提示输入：</p>
+                <p><code>/register YourPassword YourPassword</code></p>
+                <p>注册完成后，会弹出一个箱子页面，需阅读服务器游玩规则并点击绿色玻璃同意。</p>
+                <p><strong>登录：</strong>Java版每次游玩前使用 <code>/login YourPassword</code> 登录。在同一局域网下，24小时内再次进服可免密登录。</p>
+                <p><strong>基岩版：</strong>由于微软账号的唯一性，每次游玩自动登录，无需手动登录。</p>
+                <p>基岩版玩家在服务器内的 ID 会自动加上 <code>BE_</code> 前缀，例如：Xbox 代号为 <code>ElofHew</code>，则服务器内 ID 为 <code>BE_ElofHew</code>。</p>
+            </div>
+        </div>
+
+        <div class="section">
             <h2 class="section-title">头衔系统</h2>
             <div class="sub-intro">
                 <p>在<strong>原版生存服</strong>和<strong>粘液空岛服</strong>内，可以通过指令 <code>/prefix</code> 来自定义玩家头衔。</p>
@@ -74,6 +86,15 @@
                     <li><code>/skin url xxx</code> — 从 URL 获取皮肤并应用</li>
                     <li><code>/skin clear</code> — 清除皮肤，恢复默认</li>
                 </ul>
+                <p><strong>使用 LittleSkin 获取皮肤：</strong></p>
+                <ol style="padding-left: 24px; color: #c0d0e0; font-size: 15px; line-height: 1.7; display: flex; flex-direction: column; gap: 6px;">
+                    <li>进入 <a href="https://littleskin.cn/" target="_blank" style="color: #4a9eff;">LittleSkin 官网</a>，登录你的账号</li>
+                    <li>在皮肤库中，找到一个你喜欢的皮肤</li>
+                    <li>点击皮肤预览页面的<strong>下载</strong>按钮</li>
+                    <li>复制这个皮肤的<strong>下载链接</strong>（格式为 <code>https://littleskin.cn/raw/皮肤ID</code>）</li>
+                    <li>在游戏中使用指令 <code>/skin url https://littleskin.cn/raw/皮肤ID</code></li>
+                    <li>皮肤应用成功！</li>
+                </ol>
             </div>
         </div>
 
@@ -82,9 +103,11 @@
             <div class="sub-intro">
                 <ul>
                     <li><code>/back</code> — 死亡后传回死亡地点或上一个 home</li>
-                    <li><code>/tell xxx abc</code> — 向某人私聊</li>
+                    <li><code>/tell xxx abc</code> — 向某人私聊（服务器后台仍有记录，请注意言行）</li>
                     <li><code>/menu</code> 或 <kbd>Shift</kbd>+<kbd>F</kbd> — 打开箱子菜单</li>
                     <li><code>[i]</code> — 在聊天框输入可展示手持物品</li>
+                    <li>聊天框直接打出玩家完整 ID 可<strong>艾特</strong>该玩家</li>
+                    <li><code>/co i</code> — 开启查询模式，左键方块可查放置/破坏记录，右键容器可查放入/拿取记录</li>
                 </ul>
             </div>
         </div>
@@ -141,28 +164,40 @@
                 <ul>
                     <li><code>/res create xxx</code> — 创建领地（需先使用木锄选取选区）</li>
                     <li><code>/res remove xxx</code> — 删除领地</li>
-                    <li><code>/res set</code> — 设置领地公共权限</li>
+                    <li><code>/res rename aaa bbb</code> — 将名为 aaa 的领地重命名为 bbb</li>
+                    <li><code>/res give xxx somebody</code> — 将名为 xxx 的领地赠送给某人</li>
+                    <li><code>/res set</code> — 设置领地公共权限（左键启用，右键禁用）</li>
                     <li><code>/res pset xxx somebody</code> — 设置某人在领地内的个人权限</li>
+                    <li><code>/res padd xxx somebody</code> — 批量添加某人在领地内的常用权限</li>
+                    <li><code>/res pdel xxx somebody</code> — 批量删除某人在领地内的权限</li>
                     <li><code>/res expand ?</code> — 向面前方向扩展领地</li>
                     <li><code>/res contract ?</code> — 向背后方向收缩领地</li>
-                    <li><code>/res tp xxx</code> — 传送到领地</li>
+                    <li><code>/res subzone xxx</code> — 在父领地内创建名为 xxx 的子领地</li>
+                    <li><code>/res message aaa enter xxx</code> — 设置领地进入提示词</li>
+                    <li><code>/res message bbb leave xxx</code> — 设置领地离开提示词</li>
+                    <li><code>/res tpset</code> — 设置当前位置为领地传送点</li>
+                    <li><code>/res tp xxx</code> — 传送到名为 xxx 的领地</li>
                 </ul>
-                <p>更多高级功能请查阅服务器内帮助或 Minecraft 插件百科。</p>
+                <p><strong>费用与赔偿：</strong>创建领地每格 0.02 金币，删除领地赔偿总费用的 50%，收缩领地每格 0.01 金币。子领地免费。</p>
+                <p><strong>冲突规则：</strong>不同玩家的领地之间至少间隔 8 格，但同一玩家的不同领地可以紧挨着。两个领地之间不能重叠。</p>
+                <p>更多高级功能请查阅 <a href="https://mineplugin.org/Residence" target="_blank" style="color: #4a9eff;">Minecraft 插件百科</a>。</p>
             </div>
         </div>
 
         <div class="section">
             <h2 class="section-title">MOD 使用</h2>
             <div class="sub-intro">
-                <p>在原版生存服中，一些主流生电 MOD 均可使用，例如：</p>
+                <p>在原版生存服中，以下主流生电 MOD 均可使用：</p>
                 <ul>
-                    <li>投影（Litematica）及打印机</li>
+                    <li>投影（Litematica）及投影打印机（Litematica Printer）</li>
                     <li>灵魂出窍（Tweakeroo、Freecam）</li>
                     <li>小地图（Xaero、JourneyMap）</li>
                     <li>方块信息显示（Jade、WTHIT）</li>
-                    <li>一键背包整理</li>
+                    <li>一键背包整理（Inventory Profile Next）</li>
                 </ul>
-                <p><strong>严禁</strong>将灵魂出窍用于挖矿，<strong>严禁</strong>使用矿透 MOD 和外挂客户端。</p>
+                <p><strong>严禁</strong>将灵魂出窍用于挖矿，<strong>严禁</strong>使用矿透 MOD 和外挂客户端/修改游戏内容的 MOD，违者封号处罚！</p>
+                <p>其他纯客户端优化 MOD 可以使用。如果拿不准某个 MOD 能不能用，请先咨询服主。</p>
+                <p>使用 Tweakeroo 时，建议将用不到的功能禁用掉快捷键，以免影响其他玩家。</p>
             </div>
         </div>
 
@@ -172,12 +207,13 @@
                 <p>服务器为<strong>公益服务器</strong>，VIP 非充值获得。</p>
                 <p><strong>获得 VIP 的方法：</strong></p>
                 <ul>
-                    <li>发布宣传视频到 B 站</li>
-                    <li>在服务器内建造大型建筑</li>
-                    <li>拉新人加入服务器</li>
-                    <li>参加服务器限时活动</li>
+                    <li>发布宣传视频到 <a href="https://www.bilibili.com/" target="_blank" style="color: #4a9eff;">哔哩哔哩</a></li>
+                    <li>在服务器内建造大型有观赏价值的建筑（同时奖励金币）</li>
+                    <li>拉新人加入服务器（你和新人均有 VIP 奖励）</li>
+                    <li>参加服务器限时活动（可能同时奖励金币）</li>
                 </ul>
                 <p><strong>VIP 特权：</strong>生存模式下飞行（<code>/fly</code>）。</p>
+                <p><strong>计时标准：</strong>按正常时间流逝速度消耗时长。例如 2026年8月8日上午8点获得两天 VIP，则 2026年8月10日上午8点准时到期。</p>
             </div>
         </div>
 
