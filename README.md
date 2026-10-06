@@ -5,3 +5,5 @@
 服务器官网： [www.nubec.top/cagan](https://www.nubec.top/cagan)
 
 服务器官方QQ群：[728586261](https://qm.qq.com/q/yhhEUONMXu)
+
+服务器快速入门：[blog.danevan.top/posts/help-cagan](https://blog.danevan.top/posts/help-cagan/)
